@@ -1,0 +1,1773 @@
+2024-07-09 14:31:58,406 - __main__ - INFO - СТАРТ СОЗДАНИЕ БАЗЫ ДАННЫХ
+2024-07-09 14:32:34,933 - __main__ - INFO - СТАРТ СОЗДАНИЕ БАЗЫ ДАННЫХ
+2024-07-09 14:33:11,829 - __main__ - INFO - СТАРТ СОЗДАНИЕ БАЗЫ ДАННЫХ
+2024-07-09 14:33:11,835 - __main__ - INFO - Версия PostgreSQL: ('PostgreSQL 16.3 (Debian 16.3-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit',)
+2024-07-09 14:33:11,841 - __main__ - INFO - БАЗА ДАННЫХ СОЗДАНА
+2024-07-09 14:59:18,240 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 14:59:18,242 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 14:59:19,419 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 14:59:19,624 - aiogram.event - INFO - Update id=346604917 is not handled. Duration 0 ms by bot id=7488365215
+2024-07-09 14:59:23,283 - aiogram.event - INFO - Update id=346604918 is handled. Duration 447 ms by bot id=7488365215
+2024-07-09 15:00:52,329 - aiogram.event - INFO - Update id=346604919 is not handled. Duration 4385 ms by bot id=7488365215
+2024-07-09 15:00:52,329 - aiogram.event - ERROR - Cause exception while process update id=346604919 by bot id=7488365215
+TesseractNotFoundError: /usr/bin/tesseract is not installed or it's not in your PATH. See README file for more information.
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 255, in run_tesseract
+    proc = subprocess.Popen(cmd_args, **subprocess_args())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/bin/tesseract'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 91, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 51, in process_image
+    text = pytesseract.image_to_string(binary, lang='rus')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 260, in run_tesseract
+    raise TesseractNotFoundError()
+pytesseract.pytesseract.TesseractNotFoundError: /usr/bin/tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-07-09 15:02:14,959 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:02:14,960 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:02:14,960 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:02:17,495 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:02:17,495 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:02:17,993 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:02:24,821 - aiogram.event - INFO - Update id=346604920 is handled. Duration 484 ms by bot id=7488365215
+2024-07-09 15:02:31,958 - aiogram.event - INFO - Update id=346604921 is not handled. Duration 518 ms by bot id=7488365215
+2024-07-09 15:02:31,958 - aiogram.event - ERROR - Cause exception while process update id=346604921 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/tessdata/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 91, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 51, in process_image
+    text = pytesseract.image_to_string(binary, lang='rus')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/tessdata/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:03:24,373 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:03:24,374 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:03:24,374 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:03:26,839 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:03:26,840 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:03:27,227 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:03:28,183 - aiogram.event - INFO - Update id=346604922 is handled. Duration 416 ms by bot id=7488365215
+2024-07-09 15:03:34,624 - __main__ - ERROR - Ошибка при подключении к PostgreSQL: column "iin" of relation "users" does not exist
+LINE 2:             INSERT INTO users (name, telegram_id, iin, fio, ...
+                                                          ^
+
+2024-07-09 15:03:34,804 - aiogram.event - INFO - Update id=346604923 is handled. Duration 1032 ms by bot id=7488365215
+2024-07-09 15:03:55,837 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:03:55,837 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:03:55,837 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:05:06,563 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:05:06,564 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:05:07,175 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:07:29,465 - aiogram.event - INFO - Update id=346604924 is handled. Duration 464 ms by bot id=7488365215
+2024-07-09 15:07:32,741 - __main__ - ERROR - Ошибка при подключении к PostgreSQL: column "iin" of relation "users" does not exist
+LINE 2:             INSERT INTO users (name, telegram_id, iin, fio, ...
+                                                          ^
+
+2024-07-09 15:07:32,990 - aiogram.event - INFO - Update id=346604925 is handled. Duration 1024 ms by bot id=7488365215
+2024-07-09 15:08:43,438 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:08:43,438 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:08:43,439 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:08:45,758 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:08:45,758 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:08:46,306 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:08:49,947 - aiogram.event - INFO - Update id=346604926 is handled. Duration 582 ms by bot id=7488365215
+2024-07-09 15:08:52,173 - __main__ - ERROR - Ошибка при подключении к PostgreSQL: invalid input syntax for type date: "Не найдено"
+LINE 3: ...lllllll', 5018779361, 'Не найдено', 'Не найдено', 'Не найден...
+                                                             ^
+
+2024-07-09 15:08:52,411 - aiogram.event - INFO - Update id=346604927 is handled. Duration 1042 ms by bot id=7488365215
+2024-07-09 15:10:03,878 - __main__ - ERROR - Ошибка при подключении к PostgreSQL: invalid input syntax for type date: "Не найдено"
+LINE 3: ...lllll', 5018779361, '030503551146', 'Не найдено', 'Не найден...
+                                                             ^
+
+2024-07-09 15:10:04,098 - aiogram.event - INFO - Update id=346604928 is handled. Duration 1753 ms by bot id=7488365215
+2024-07-09 15:10:18,947 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:10:18,948 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:10:18,948 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:10:21,272 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:10:21,272 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:10:21,654 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:10:27,499 - aiogram.event - INFO - Update id=346604929 is not handled. Duration 724 ms by bot id=7488365215
+2024-07-09 15:10:27,499 - aiogram.event - ERROR - Cause exception while process update id=346604929 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 94, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 54, in process_image
+    text = pytesseract.image_to_string(binary, lang='rus')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:10:41,182 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:10:41,182 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:10:41,182 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:10:43,441 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:10:43,441 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:10:43,910 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:10:46,995 - __main__ - ERROR - Ошибка при подключении к PostgreSQL: invalid input syntax for type date: "Не найдено"
+LINE 3: ...lllll', 5018779361, '030503551146', 'Не найдено', 'Не найден...
+                                                             ^
+
+2024-07-09 15:10:47,386 - aiogram.event - INFO - Update id=346604930 is handled. Duration 2035 ms by bot id=7488365215
+2024-07-09 15:11:14,741 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:11:14,741 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:11:14,741 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:11:16,957 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:11:16,958 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:11:17,472 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:11:32,151 - aiogram.event - INFO - Update id=346604931 is not handled. Duration 774 ms by bot id=7488365215
+2024-07-09 15:11:32,151 - aiogram.event - ERROR - Cause exception while process update id=346604931 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 94, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 54, in process_image
+    text = pytesseract.image_to_string(binary, lang='rus')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:12:37,611 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:12:37,611 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:12:37,611 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:12:39,807 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:12:39,808 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:12:40,393 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:12:45,190 - aiogram.event - INFO - Update id=346604932 is not handled. Duration 887 ms by bot id=7488365215
+2024-07-09 15:12:45,190 - aiogram.event - ERROR - Cause exception while process update id=346604932 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/4.00/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 94, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 54, in process_image
+    text = pytesseract.image_to_string(binary, lang='rus')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/4.00/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:12:49,711 - aiogram.event - INFO - Update id=346604933 is not handled. Duration 525 ms by bot id=7488365215
+2024-07-09 15:12:49,711 - aiogram.event - ERROR - Cause exception while process update id=346604933 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/4.00/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 94, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 54, in process_image
+    text = pytesseract.image_to_string(binary, lang='rus')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/4.00/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:13:31,507 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:13:31,507 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:13:31,507 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:13:33,793 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:13:33,794 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:13:34,248 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:13:37,604 - aiogram.event - INFO - Update id=346604934 is not handled. Duration 756 ms by bot id=7488365215
+2024-07-09 15:13:37,604 - aiogram.event - ERROR - Cause exception while process update id=346604934 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 94, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 54, in process_image
+    text = pytesseract.image_to_string(binary, lang='rus')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:15:13,574 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:15:13,575 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:15:13,575 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:15:15,772 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:15:15,772 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:15:16,366 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:15:21,191 - aiogram.event - INFO - Update id=346604935 is not handled. Duration 727 ms by bot id=7488365215
+2024-07-09 15:15:21,191 - aiogram.event - ERROR - Cause exception while process update id=346604935 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 94, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 54, in process_image
+    text = pytesseract.image_to_string(binary, lang='rus')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:19:13,923 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:19:13,923 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:19:13,923 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:19:16,115 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:19:16,115 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:19:16,755 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:19:28,338 - __main__ - ERROR - Ошибка при подключении к PostgreSQL: null value in column "id" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (null, Llllllllll, 5018779361, Не найдено, Не найдено, null, null, Не найдено).
+
+2024-07-09 15:19:28,500 - aiogram.event - INFO - Update id=346604936 is handled. Duration 1163 ms by bot id=7488365215
+2024-07-09 15:20:14,230 - __main__ - ERROR - Ошибка при подключении к PostgreSQL: null value in column "id" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (null, Llllllllll, 5018779361, 030503551146, Не найдено, null, null, Не найдено).
+
+2024-07-09 15:20:14,425 - aiogram.event - INFO - Update id=346604937 is handled. Duration 1765 ms by bot id=7488365215
+2024-07-09 15:23:47,641 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:23:47,642 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:23:47,642 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:23:49,878 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:23:49,879 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:23:50,661 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:23:56,248 - aiogram.event - INFO - Update id=346604938 is not handled. Duration 716 ms by bot id=7488365215
+2024-07-09 15:23:56,248 - aiogram.event - ERROR - Cause exception while process update id=346604938 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Error opening data file /usr/share/tesseract-ocr/5/eng.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'eng\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 94, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 54, in process_image
+    text = pytesseract.image_to_string(binary, lang='rus+eng')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Error opening data file /usr/share/tesseract-ocr/5/eng.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'eng\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:24:10,535 - aiogram.event - INFO - Update id=346604939 is not handled. Duration 686 ms by bot id=7488365215
+2024-07-09 15:24:10,535 - aiogram.event - ERROR - Cause exception while process update id=346604939 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Error opening data file /usr/share/tesseract-ocr/5/eng.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'eng\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 94, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 54, in process_image
+    text = pytesseract.image_to_string(binary, lang='rus+eng')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Error opening data file /usr/share/tesseract-ocr/5/eng.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'eng\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:24:29,267 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:24:29,268 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:24:29,268 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:24:31,505 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:24:31,505 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:24:32,002 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:24:43,997 - __main__ - ERROR - Ошибка при подключении к PostgreSQL: null value in column "id" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (null, Llllllllll, 5018779361, Не найдено, Не найдено, 2003-03-05, 2019-11-07, Не найдено).
+
+2024-07-09 15:24:44,195 - aiogram.event - INFO - Update id=346604940 is handled. Duration 2314 ms by bot id=7488365215
+2024-07-09 15:26:36,443 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:26:36,444 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:26:36,444 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:26:38,783 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:26:38,784 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:26:39,801 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:26:49,962 - __main__ - ERROR - Ошибка при подключении к PostgreSQL: null value in column "id" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (null, Llllllllll, 5018779361, 030503551146, Не найдено, 2003-03-05, 2019-11-07, Не найдено).
+
+2024-07-09 15:26:50,166 - aiogram.event - INFO - Update id=346604941 is handled. Duration 2295 ms by bot id=7488365215
+2024-07-09 15:30:52,647 - aiogram.event - INFO - Update id=346604942 is handled. Duration 2235 ms by bot id=7488365215
+2024-07-09 15:35:08,244 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:35:08,244 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:35:08,244 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:35:35,817 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:35:35,818 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:35:36,258 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:35:37,333 - aiogram.event - INFO - Update id=346604943 is not handled. Duration 883 ms by bot id=7488365215
+2024-07-09 15:35:37,333 - aiogram.event - ERROR - Cause exception while process update id=346604943 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Error opening data file /usr/share/tesseract-ocr/5/eng.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'eng\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 97, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 54, in process_image
+    text = pytesseract.image_to_string(binary, lang='rus+eng')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Error opening data file /usr/share/tesseract-ocr/5/eng.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'eng\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:36:10,520 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:36:10,520 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:36:10,521 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:36:12,738 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:36:12,738 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:36:13,209 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:36:26,588 - aiogram.event - INFO - Update id=346604944 is handled. Duration 2317 ms by bot id=7488365215
+2024-07-09 15:39:33,206 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:39:33,207 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:39:33,208 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:39:35,562 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:39:35,563 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:39:36,212 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:40:01,069 - aiogram.event - INFO - Update id=346604945 is not handled. Duration 839 ms by bot id=7488365215
+2024-07-09 15:40:01,069 - aiogram.event - ERROR - Cause exception while process update id=346604945 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/kaz.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'kaz\' Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 107, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 54, in process_image
+    text = pytesseract.image_to_string(binary, lang='kaz+rus')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/kaz.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'kaz\' Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:40:21,750 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:40:21,750 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:40:21,750 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:40:23,975 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:40:23,975 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:40:24,776 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:40:35,689 - aiogram.event - INFO - Update id=346604946 is handled. Duration 1504 ms by bot id=7488365215
+2024-07-09 15:43:33,061 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:43:33,061 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:43:33,061 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:46:41,765 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:46:41,765 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:46:42,229 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:47:09,095 - aiogram.event - INFO - Update id=346604947 is not handled. Duration 859 ms by bot id=7488365215
+2024-07-09 15:47:09,095 - aiogram.event - ERROR - Cause exception while process update id=346604947 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/kaz.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'kaz\' Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 100, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 54, in process_image
+    text = pytesseract.image_to_string(binary, lang='kaz+rus')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/kaz.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'kaz\' Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:47:22,688 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:47:22,689 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:47:22,689 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:47:24,790 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:47:24,790 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:47:25,652 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:47:36,812 - __main__ - ERROR - Ошибка при подключении к PostgreSQL: column "surname" of relation "users" does not exist
+LINE 2:             INSERT INTO users (name, surname, patronymic, te...
+                                             ^
+
+2024-07-09 15:47:36,987 - aiogram.event - INFO - Update id=346604948 is handled. Duration 1394 ms by bot id=7488365215
+2024-07-09 15:49:04,028 - aiogram.event - INFO - Update id=346604949 is handled. Duration 1567 ms by bot id=7488365215
+2024-07-09 15:51:27,248 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:51:27,249 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:51:27,249 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:51:29,579 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:51:29,579 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:51:30,085 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:51:46,337 - aiogram.event - INFO - Update id=346604950 is not handled. Duration 861 ms by bot id=7488365215
+2024-07-09 15:51:46,337 - aiogram.event - ERROR - Cause exception while process update id=346604950 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/kaz.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'kaz\' Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 120, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 74, in process_image
+    text = pytesseract.image_to_string(new_image, lang='kaz+rus')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/kaz.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'kaz\' Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:52:02,419 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:52:02,419 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:52:02,419 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:52:04,698 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:52:04,698 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:52:05,207 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:52:17,374 - aiogram.event - INFO - Update id=346604951 is handled. Duration 946 ms by bot id=7488365215
+2024-07-09 15:54:27,451 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:54:27,451 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:54:27,451 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:54:29,835 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:54:29,836 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:54:30,878 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:55:02,005 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:55:02,006 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:55:02,006 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:55:04,123 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:55:04,124 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:55:04,574 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:55:09,608 - aiogram.event - INFO - Update id=346604952 is not handled. Duration 724 ms by bot id=7488365215
+2024-07-09 15:55:09,608 - aiogram.event - ERROR - Cause exception while process update id=346604952 by bot id=7488365215
+TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/kaz.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'kaz\' Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 120, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 74, in process_image
+    text = pytesseract.image_to_string(new_image, lang='kaz+rus')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 423, in image_to_string
+    return {
+           ^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 426, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 288, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/pytesseract/pytesseract.py", line 264, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file /usr/share/tesseract-ocr/5/kaz.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'kaz\' Error opening data file /usr/share/tesseract-ocr/5/rus.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory. Failed loading language \'rus\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2024-07-09 15:55:20,399 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:55:20,400 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:55:20,400 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 15:55:22,623 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 15:55:22,624 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 15:55:23,340 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:55:26,119 - aiogram.event - INFO - Update id=346604953 is handled. Duration 1095 ms by bot id=7488365215
+2024-07-09 15:59:00,568 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 15:59:00,569 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 15:59:00,569 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 16:00:03,223 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 16:00:03,223 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 16:00:03,628 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 16:04:00,880 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 16:04:00,881 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 16:04:00,882 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 16:04:04,446 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 16:04:04,447 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 16:04:04,848 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 16:04:05,713 - google.auth._default - DEBUG - Checking None for explicit credentials as part of auth process...
+2024-07-09 16:04:05,714 - google.auth._default - DEBUG - Checking Cloud SDK credentials as part of auth process...
+2024-07-09 16:04:05,714 - google.auth._default - DEBUG - Cloud SDK credentials not found on disk; not using them
+2024-07-09 16:04:05,716 - google.auth.transport._http_client - DEBUG - Making request: GET http://169.254.169.254
+2024-07-09 16:04:08,720 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-07-09 16:04:08,721 - google.auth.transport._http_client - DEBUG - Making request: GET http://169.254.169.254
+2024-07-09 16:04:11,724 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-07-09 16:04:11,725 - google.auth.transport._http_client - DEBUG - Making request: GET http://169.254.169.254
+2024-07-09 16:04:14,727 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-07-09 16:04:14,727 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-07-09 16:04:14,728 - aiogram.event - INFO - Update id=346604954 is not handled. Duration 9668 ms by bot id=7488365215
+2024-07-09 16:04:14,728 - aiogram.event - ERROR - Cause exception while process update id=346604954 by bot id=7488365215
+DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 102, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 45, in process_image
+    client = vision.ImageAnnotatorClient()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/google/cloud/vision_v1/services/image_annotator/client.py", line 699, in __init__
+    self._transport = transport_init(
+                      ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/google/cloud/vision_v1/services/image_annotator/transports/grpc.py", line 157, in __init__
+    super().__init__(
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/google/cloud/vision_v1/services/image_annotator/transports/base.py", line 103, in __init__
+    credentials, _ = google.auth.default(
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/google/auth/_default.py", line 691, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+2024-07-09 16:04:15,349 - google.auth._default - DEBUG - Checking None for explicit credentials as part of auth process...
+2024-07-09 16:04:15,350 - google.auth._default - DEBUG - Checking Cloud SDK credentials as part of auth process...
+2024-07-09 16:04:15,350 - google.auth._default - DEBUG - Cloud SDK credentials not found on disk; not using them
+2024-07-09 16:04:15,350 - google.auth.transport._http_client - DEBUG - Making request: GET http://169.254.169.254
+2024-07-09 16:04:18,353 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-07-09 16:04:18,353 - google.auth.transport._http_client - DEBUG - Making request: GET http://169.254.169.254
+2024-07-09 16:04:21,358 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-07-09 16:04:21,359 - google.auth.transport._http_client - DEBUG - Making request: GET http://169.254.169.254
+2024-07-09 16:04:24,362 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-07-09 16:04:24,362 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-07-09 16:04:24,363 - aiogram.event - INFO - Update id=346604955 is not handled. Duration 9628 ms by bot id=7488365215
+2024-07-09 16:04:24,363 - aiogram.event - ERROR - Cause exception while process update id=346604955 by bot id=7488365215
+DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+Traceback (most recent call last):
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 102, in handle_photo
+    text = process_image("temp_photo.jpg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/main.py", line 45, in process_image
+    client = vision.ImageAnnotatorClient()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/google/cloud/vision_v1/services/image_annotator/client.py", line 699, in __init__
+    self._transport = transport_init(
+                      ^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/google/cloud/vision_v1/services/image_annotator/transports/grpc.py", line 157, in __init__
+    super().__init__(
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/google/cloud/vision_v1/services/image_annotator/transports/base.py", line 103, in __init__
+    credentials, _ = google.auth.default(
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/laptop/PycharmProjects/pythonProject2/.venv/lib/python3.12/site-packages/google/auth/_default.py", line 691, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+2024-07-09 16:08:23,176 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2024-07-09 16:08:23,177 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 16:08:23,177 - aiogram.dispatcher - INFO - Polling stopped
+2024-07-09 16:13:49,341 - asyncio - DEBUG - Using selector: EpollSelector
+2024-07-09 16:13:49,342 - aiogram.dispatcher - INFO - Start polling
+2024-07-09 16:13:49,861 - aiogram.dispatcher - INFO - Run polling for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-09 16:14:12,241 - __main__ - ERROR - Ошибка при подключении к PostgreSQL: column "fio" of relation "users" does not exist
+LINE 2: ...       INSERT INTO users (name, telegram_id, iin, fio, date_...
+                                                             ^
+
+2024-07-09 16:14:12,422 - aiogram.event - INFO - Update id=346604956 is handled. Duration 3291 ms by bot id=7488365215
+2024-07-09 18:43:11,333 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2024-07-09 18:43:11,333 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7488365215)
+2024-07-09 18:43:12,336 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:43:12,336 - aiogram.dispatcher - WARNING - Sleep for 1.286311 seconds and try again... (tryings = 1, bot id = 7488365215)
+2024-07-09 18:43:13,626 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:43:13,626 - aiogram.dispatcher - WARNING - Sleep for 1.742484 seconds and try again... (tryings = 2, bot id = 7488365215)
+2024-07-09 18:43:15,373 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:43:15,373 - aiogram.dispatcher - WARNING - Sleep for 2.288965 seconds and try again... (tryings = 3, bot id = 7488365215)
+2024-07-09 18:43:17,665 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:43:17,665 - aiogram.dispatcher - WARNING - Sleep for 3.065981 seconds and try again... (tryings = 4, bot id = 7488365215)
+2024-07-09 18:43:20,736 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:43:20,736 - aiogram.dispatcher - WARNING - Sleep for 4.219424 seconds and try again... (tryings = 5, bot id = 7488365215)
+2024-07-09 18:43:24,963 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:43:24,963 - aiogram.dispatcher - WARNING - Sleep for 4.977841 seconds and try again... (tryings = 6, bot id = 7488365215)
+2024-07-09 18:43:29,948 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:43:29,949 - aiogram.dispatcher - WARNING - Sleep for 5.124472 seconds and try again... (tryings = 7, bot id = 7488365215)
+2024-07-09 18:43:35,081 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:43:35,081 - aiogram.dispatcher - WARNING - Sleep for 4.953152 seconds and try again... (tryings = 8, bot id = 7488365215)
+2024-07-09 18:43:40,044 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:43:40,044 - aiogram.dispatcher - WARNING - Sleep for 5.091563 seconds and try again... (tryings = 9, bot id = 7488365215)
+2024-07-09 18:43:45,142 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:43:45,143 - aiogram.dispatcher - WARNING - Sleep for 4.928820 seconds and try again... (tryings = 10, bot id = 7488365215)
+2024-07-09 18:43:50,079 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:43:50,079 - aiogram.dispatcher - WARNING - Sleep for 5.047646 seconds and try again... (tryings = 11, bot id = 7488365215)
+2024-07-09 18:43:55,135 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:43:55,136 - aiogram.dispatcher - WARNING - Sleep for 4.921858 seconds and try again... (tryings = 12, bot id = 7488365215)
+2024-07-09 18:44:00,065 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:00,065 - aiogram.dispatcher - WARNING - Sleep for 5.080359 seconds and try again... (tryings = 13, bot id = 7488365215)
+2024-07-09 18:44:05,153 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:05,154 - aiogram.dispatcher - WARNING - Sleep for 4.868862 seconds and try again... (tryings = 14, bot id = 7488365215)
+2024-07-09 18:44:10,030 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:10,030 - aiogram.dispatcher - WARNING - Sleep for 4.834434 seconds and try again... (tryings = 15, bot id = 7488365215)
+2024-07-09 18:44:14,870 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:14,870 - aiogram.dispatcher - WARNING - Sleep for 4.834134 seconds and try again... (tryings = 16, bot id = 7488365215)
+2024-07-09 18:44:19,712 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:19,712 - aiogram.dispatcher - WARNING - Sleep for 4.963339 seconds and try again... (tryings = 17, bot id = 7488365215)
+2024-07-09 18:44:24,683 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:24,683 - aiogram.dispatcher - WARNING - Sleep for 4.953286 seconds and try again... (tryings = 18, bot id = 7488365215)
+2024-07-09 18:44:29,645 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:29,645 - aiogram.dispatcher - WARNING - Sleep for 4.996536 seconds and try again... (tryings = 19, bot id = 7488365215)
+2024-07-09 18:44:34,649 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:34,649 - aiogram.dispatcher - WARNING - Sleep for 4.950487 seconds and try again... (tryings = 20, bot id = 7488365215)
+2024-07-09 18:44:39,609 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:39,609 - aiogram.dispatcher - WARNING - Sleep for 5.028256 seconds and try again... (tryings = 21, bot id = 7488365215)
+2024-07-09 18:44:44,644 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:44,645 - aiogram.dispatcher - WARNING - Sleep for 4.994815 seconds and try again... (tryings = 22, bot id = 7488365215)
+2024-07-09 18:44:49,647 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:49,647 - aiogram.dispatcher - WARNING - Sleep for 5.050647 seconds and try again... (tryings = 23, bot id = 7488365215)
+2024-07-09 18:44:54,705 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:54,705 - aiogram.dispatcher - WARNING - Sleep for 4.819118 seconds and try again... (tryings = 24, bot id = 7488365215)
+2024-07-09 18:44:59,532 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:44:59,533 - aiogram.dispatcher - WARNING - Sleep for 4.984096 seconds and try again... (tryings = 25, bot id = 7488365215)
+2024-07-09 18:45:04,522 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:45:04,522 - aiogram.dispatcher - WARNING - Sleep for 5.119617 seconds and try again... (tryings = 26, bot id = 7488365215)
+2024-07-09 18:45:09,649 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:45:09,649 - aiogram.dispatcher - WARNING - Sleep for 5.094311 seconds and try again... (tryings = 27, bot id = 7488365215)
+2024-07-09 18:45:14,751 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:45:14,752 - aiogram.dispatcher - WARNING - Sleep for 4.908005 seconds and try again... (tryings = 28, bot id = 7488365215)
+2024-07-09 18:45:19,667 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:45:19,667 - aiogram.dispatcher - WARNING - Sleep for 4.938270 seconds and try again... (tryings = 29, bot id = 7488365215)
+2024-07-09 18:45:24,614 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:45:24,615 - aiogram.dispatcher - WARNING - Sleep for 4.942842 seconds and try again... (tryings = 30, bot id = 7488365215)
+2024-07-09 18:45:29,566 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:45:29,566 - aiogram.dispatcher - WARNING - Sleep for 5.023293 seconds and try again... (tryings = 31, bot id = 7488365215)
+2024-07-09 18:45:34,593 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:45:34,594 - aiogram.dispatcher - WARNING - Sleep for 4.883694 seconds and try again... (tryings = 32, bot id = 7488365215)
+2024-07-09 18:45:39,488 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:45:39,488 - aiogram.dispatcher - WARNING - Sleep for 5.023507 seconds and try again... (tryings = 33, bot id = 7488365215)
+2024-07-09 18:45:44,520 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:45:44,520 - aiogram.dispatcher - WARNING - Sleep for 5.089994 seconds and try again... (tryings = 34, bot id = 7488365215)
+2024-07-09 18:45:49,617 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:45:49,618 - aiogram.dispatcher - WARNING - Sleep for 4.965160 seconds and try again... (tryings = 35, bot id = 7488365215)
+2024-07-09 18:45:54,591 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:45:54,591 - aiogram.dispatcher - WARNING - Sleep for 4.765692 seconds and try again... (tryings = 36, bot id = 7488365215)
+2024-07-09 18:45:59,364 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:45:59,364 - aiogram.dispatcher - WARNING - Sleep for 4.995647 seconds and try again... (tryings = 37, bot id = 7488365215)
+2024-07-09 18:46:04,367 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:46:04,367 - aiogram.dispatcher - WARNING - Sleep for 4.994899 seconds and try again... (tryings = 38, bot id = 7488365215)
+2024-07-09 18:46:09,369 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:46:09,369 - aiogram.dispatcher - WARNING - Sleep for 5.065331 seconds and try again... (tryings = 39, bot id = 7488365215)
+2024-07-09 18:46:14,444 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:46:14,445 - aiogram.dispatcher - WARNING - Sleep for 5.127836 seconds and try again... (tryings = 40, bot id = 7488365215)
+2024-07-09 18:46:19,578 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:46:19,579 - aiogram.dispatcher - WARNING - Sleep for 5.096406 seconds and try again... (tryings = 41, bot id = 7488365215)
+2024-07-09 18:46:24,683 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:46:24,683 - aiogram.dispatcher - WARNING - Sleep for 4.950663 seconds and try again... (tryings = 42, bot id = 7488365215)
+2024-07-09 18:46:29,642 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:46:29,643 - aiogram.dispatcher - WARNING - Sleep for 4.773828 seconds and try again... (tryings = 43, bot id = 7488365215)
+2024-07-09 18:46:34,424 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:46:34,424 - aiogram.dispatcher - WARNING - Sleep for 4.792021 seconds and try again... (tryings = 44, bot id = 7488365215)
+2024-07-09 18:46:39,223 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:46:39,223 - aiogram.dispatcher - WARNING - Sleep for 5.095804 seconds and try again... (tryings = 45, bot id = 7488365215)
+2024-07-09 18:46:44,327 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:46:44,327 - aiogram.dispatcher - WARNING - Sleep for 4.984786 seconds and try again... (tryings = 46, bot id = 7488365215)
+2024-07-09 18:46:49,319 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:46:49,319 - aiogram.dispatcher - WARNING - Sleep for 4.813258 seconds and try again... (tryings = 47, bot id = 7488365215)
+2024-07-09 18:46:54,140 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:46:54,141 - aiogram.dispatcher - WARNING - Sleep for 5.115093 seconds and try again... (tryings = 48, bot id = 7488365215)
+2024-07-09 18:46:59,262 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:46:59,262 - aiogram.dispatcher - WARNING - Sleep for 5.071240 seconds and try again... (tryings = 49, bot id = 7488365215)
+2024-07-09 18:47:04,338 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:47:04,338 - aiogram.dispatcher - WARNING - Sleep for 5.161346 seconds and try again... (tryings = 50, bot id = 7488365215)
+2024-07-09 18:47:09,510 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:47:09,510 - aiogram.dispatcher - WARNING - Sleep for 5.025636 seconds and try again... (tryings = 51, bot id = 7488365215)
+2024-07-09 18:47:14,543 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:47:14,543 - aiogram.dispatcher - WARNING - Sleep for 5.028236 seconds and try again... (tryings = 52, bot id = 7488365215)
+2024-07-09 18:47:19,579 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:47:19,580 - aiogram.dispatcher - WARNING - Sleep for 5.244707 seconds and try again... (tryings = 53, bot id = 7488365215)
+2024-07-09 18:47:24,827 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:47:24,828 - aiogram.dispatcher - WARNING - Sleep for 4.948523 seconds and try again... (tryings = 54, bot id = 7488365215)
+2024-07-09 18:47:29,780 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:47:29,780 - aiogram.dispatcher - WARNING - Sleep for 4.925459 seconds and try again... (tryings = 55, bot id = 7488365215)
+2024-07-09 18:47:34,711 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:47:34,712 - aiogram.dispatcher - WARNING - Sleep for 4.906886 seconds and try again... (tryings = 56, bot id = 7488365215)
+2024-07-09 18:47:39,626 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:47:39,627 - aiogram.dispatcher - WARNING - Sleep for 4.980022 seconds and try again... (tryings = 57, bot id = 7488365215)
+2024-07-09 18:47:44,614 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:47:44,615 - aiogram.dispatcher - WARNING - Sleep for 5.148469 seconds and try again... (tryings = 58, bot id = 7488365215)
+2024-07-09 18:47:49,771 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:47:49,772 - aiogram.dispatcher - WARNING - Sleep for 5.049662 seconds and try again... (tryings = 59, bot id = 7488365215)
+2024-07-09 18:47:54,831 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:47:54,831 - aiogram.dispatcher - WARNING - Sleep for 4.966001 seconds and try again... (tryings = 60, bot id = 7488365215)
+2024-07-09 18:47:59,806 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:47:59,807 - aiogram.dispatcher - WARNING - Sleep for 5.009539 seconds and try again... (tryings = 61, bot id = 7488365215)
+2024-07-09 18:48:04,824 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:48:04,825 - aiogram.dispatcher - WARNING - Sleep for 5.067030 seconds and try again... (tryings = 62, bot id = 7488365215)
+2024-07-09 18:48:09,899 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:48:09,900 - aiogram.dispatcher - WARNING - Sleep for 4.887204 seconds and try again... (tryings = 63, bot id = 7488365215)
+2024-07-09 18:48:14,794 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:48:14,795 - aiogram.dispatcher - WARNING - Sleep for 4.994588 seconds and try again... (tryings = 64, bot id = 7488365215)
+2024-07-09 18:48:19,796 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:48:19,796 - aiogram.dispatcher - WARNING - Sleep for 5.100886 seconds and try again... (tryings = 65, bot id = 7488365215)
+2024-07-09 18:48:24,900 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:48:24,900 - aiogram.dispatcher - WARNING - Sleep for 5.061111 seconds and try again... (tryings = 66, bot id = 7488365215)
+2024-07-09 18:48:29,970 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:48:29,970 - aiogram.dispatcher - WARNING - Sleep for 5.096254 seconds and try again... (tryings = 67, bot id = 7488365215)
+2024-07-09 18:48:35,075 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:48:35,075 - aiogram.dispatcher - WARNING - Sleep for 5.040619 seconds and try again... (tryings = 68, bot id = 7488365215)
+2024-07-09 18:48:40,123 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:48:40,123 - aiogram.dispatcher - WARNING - Sleep for 4.984611 seconds and try again... (tryings = 69, bot id = 7488365215)
+2024-07-09 18:48:45,118 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:48:45,119 - aiogram.dispatcher - WARNING - Sleep for 5.131277 seconds and try again... (tryings = 70, bot id = 7488365215)
+2024-07-09 18:48:50,258 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:48:50,258 - aiogram.dispatcher - WARNING - Sleep for 5.065670 seconds and try again... (tryings = 71, bot id = 7488365215)
+2024-07-09 18:48:55,332 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:48:55,332 - aiogram.dispatcher - WARNING - Sleep for 4.985780 seconds and try again... (tryings = 72, bot id = 7488365215)
+2024-07-09 18:49:00,325 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:49:00,325 - aiogram.dispatcher - WARNING - Sleep for 4.961355 seconds and try again... (tryings = 73, bot id = 7488365215)
+2024-07-09 18:49:05,294 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:49:05,294 - aiogram.dispatcher - WARNING - Sleep for 5.145216 seconds and try again... (tryings = 74, bot id = 7488365215)
+2024-07-09 18:49:10,448 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:49:10,448 - aiogram.dispatcher - WARNING - Sleep for 4.918667 seconds and try again... (tryings = 75, bot id = 7488365215)
+2024-07-09 18:49:15,375 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:49:15,375 - aiogram.dispatcher - WARNING - Sleep for 5.014549 seconds and try again... (tryings = 76, bot id = 7488365215)
+2024-07-09 18:49:20,397 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:49:20,398 - aiogram.dispatcher - WARNING - Sleep for 5.120338 seconds and try again... (tryings = 77, bot id = 7488365215)
+2024-07-09 18:49:25,523 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:49:25,523 - aiogram.dispatcher - WARNING - Sleep for 5.039441 seconds and try again... (tryings = 78, bot id = 7488365215)
+2024-07-09 18:49:30,570 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:49:30,570 - aiogram.dispatcher - WARNING - Sleep for 5.077798 seconds and try again... (tryings = 79, bot id = 7488365215)
+2024-07-09 18:49:35,656 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:49:35,656 - aiogram.dispatcher - WARNING - Sleep for 4.918410 seconds and try again... (tryings = 80, bot id = 7488365215)
+2024-07-09 18:49:40,587 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:49:40,587 - aiogram.dispatcher - WARNING - Sleep for 4.887744 seconds and try again... (tryings = 81, bot id = 7488365215)
+2024-07-09 18:49:45,483 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:49:45,483 - aiogram.dispatcher - WARNING - Sleep for 5.041149 seconds and try again... (tryings = 82, bot id = 7488365215)
+2024-07-09 18:49:50,532 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:49:50,533 - aiogram.dispatcher - WARNING - Sleep for 5.004756 seconds and try again... (tryings = 83, bot id = 7488365215)
+2024-07-09 18:49:55,542 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:49:55,542 - aiogram.dispatcher - WARNING - Sleep for 5.121628 seconds and try again... (tryings = 84, bot id = 7488365215)
+2024-07-09 18:50:00,672 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:50:00,672 - aiogram.dispatcher - WARNING - Sleep for 5.045775 seconds and try again... (tryings = 85, bot id = 7488365215)
+2024-07-09 18:50:05,730 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:50:05,730 - aiogram.dispatcher - WARNING - Sleep for 5.045596 seconds and try again... (tryings = 86, bot id = 7488365215)
+2024-07-09 18:50:10,783 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:50:10,784 - aiogram.dispatcher - WARNING - Sleep for 4.827746 seconds and try again... (tryings = 87, bot id = 7488365215)
+2024-07-09 18:50:15,619 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:50:15,619 - aiogram.dispatcher - WARNING - Sleep for 5.142766 seconds and try again... (tryings = 88, bot id = 7488365215)
+2024-07-09 18:50:20,766 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:50:20,766 - aiogram.dispatcher - WARNING - Sleep for 4.952368 seconds and try again... (tryings = 89, bot id = 7488365215)
+2024-07-09 18:50:25,726 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:50:25,726 - aiogram.dispatcher - WARNING - Sleep for 5.026376 seconds and try again... (tryings = 90, bot id = 7488365215)
+2024-07-09 18:50:30,759 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:50:30,759 - aiogram.dispatcher - WARNING - Sleep for 5.125216 seconds and try again... (tryings = 91, bot id = 7488365215)
+2024-07-09 18:50:35,892 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:50:35,892 - aiogram.dispatcher - WARNING - Sleep for 5.106535 seconds and try again... (tryings = 92, bot id = 7488365215)
+2024-07-09 18:50:41,007 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:50:41,007 - aiogram.dispatcher - WARNING - Sleep for 4.959187 seconds and try again... (tryings = 93, bot id = 7488365215)
+2024-07-09 18:50:45,977 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:50:45,977 - aiogram.dispatcher - WARNING - Sleep for 4.982679 seconds and try again... (tryings = 94, bot id = 7488365215)
+2024-07-09 18:50:50,969 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:50:50,969 - aiogram.dispatcher - WARNING - Sleep for 5.055279 seconds and try again... (tryings = 95, bot id = 7488365215)
+2024-07-09 18:50:56,033 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:50:56,033 - aiogram.dispatcher - WARNING - Sleep for 4.871432 seconds and try again... (tryings = 96, bot id = 7488365215)
+2024-07-09 18:51:00,912 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:51:00,912 - aiogram.dispatcher - WARNING - Sleep for 5.061826 seconds and try again... (tryings = 97, bot id = 7488365215)
+2024-07-09 18:51:05,981 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:51:05,982 - aiogram.dispatcher - WARNING - Sleep for 5.067171 seconds and try again... (tryings = 98, bot id = 7488365215)
+2024-07-09 18:51:11,058 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:51:11,058 - aiogram.dispatcher - WARNING - Sleep for 4.901104 seconds and try again... (tryings = 99, bot id = 7488365215)
+2024-07-09 18:51:15,968 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:51:15,968 - aiogram.dispatcher - WARNING - Sleep for 4.993603 seconds and try again... (tryings = 100, bot id = 7488365215)
+2024-07-09 18:51:20,969 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:51:20,969 - aiogram.dispatcher - WARNING - Sleep for 4.930636 seconds and try again... (tryings = 101, bot id = 7488365215)
+2024-07-09 18:51:25,908 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:51:25,908 - aiogram.dispatcher - WARNING - Sleep for 4.898067 seconds and try again... (tryings = 102, bot id = 7488365215)
+2024-07-09 18:51:30,815 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:51:30,815 - aiogram.dispatcher - WARNING - Sleep for 4.957457 seconds and try again... (tryings = 103, bot id = 7488365215)
+2024-07-09 18:51:35,780 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:51:35,780 - aiogram.dispatcher - WARNING - Sleep for 4.926019 seconds and try again... (tryings = 104, bot id = 7488365215)
+2024-07-09 18:51:40,713 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:51:40,713 - aiogram.dispatcher - WARNING - Sleep for 5.156828 seconds and try again... (tryings = 105, bot id = 7488365215)
+2024-07-09 18:51:45,877 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:51:45,877 - aiogram.dispatcher - WARNING - Sleep for 4.863027 seconds and try again... (tryings = 106, bot id = 7488365215)
+2024-07-09 18:51:50,749 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:51:50,749 - aiogram.dispatcher - WARNING - Sleep for 5.304906 seconds and try again... (tryings = 107, bot id = 7488365215)
+2024-07-09 18:51:56,062 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:51:56,062 - aiogram.dispatcher - WARNING - Sleep for 4.984180 seconds and try again... (tryings = 108, bot id = 7488365215)
+2024-07-09 18:52:01,054 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:52:01,054 - aiogram.dispatcher - WARNING - Sleep for 5.050333 seconds and try again... (tryings = 109, bot id = 7488365215)
+2024-07-09 18:52:06,113 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:52:06,113 - aiogram.dispatcher - WARNING - Sleep for 4.931567 seconds and try again... (tryings = 110, bot id = 7488365215)
+2024-07-09 18:52:11,052 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:52:11,052 - aiogram.dispatcher - WARNING - Sleep for 5.034848 seconds and try again... (tryings = 111, bot id = 7488365215)
+2024-07-09 18:52:16,095 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:52:16,095 - aiogram.dispatcher - WARNING - Sleep for 4.982101 seconds and try again... (tryings = 112, bot id = 7488365215)
+2024-07-09 18:52:21,088 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:52:21,088 - aiogram.dispatcher - WARNING - Sleep for 4.964515 seconds and try again... (tryings = 113, bot id = 7488365215)
+2024-07-09 18:52:26,061 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:52:26,061 - aiogram.dispatcher - WARNING - Sleep for 5.077393 seconds and try again... (tryings = 114, bot id = 7488365215)
+2024-07-09 18:52:31,147 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:52:31,147 - aiogram.dispatcher - WARNING - Sleep for 5.011904 seconds and try again... (tryings = 115, bot id = 7488365215)
+2024-07-09 18:52:36,166 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:52:36,166 - aiogram.dispatcher - WARNING - Sleep for 4.823169 seconds and try again... (tryings = 116, bot id = 7488365215)
+2024-07-09 18:52:40,995 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:52:40,996 - aiogram.dispatcher - WARNING - Sleep for 4.976749 seconds and try again... (tryings = 117, bot id = 7488365215)
+2024-07-09 18:52:45,980 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:52:45,980 - aiogram.dispatcher - WARNING - Sleep for 4.960070 seconds and try again... (tryings = 118, bot id = 7488365215)
+2024-07-09 18:52:50,945 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:52:50,945 - aiogram.dispatcher - WARNING - Sleep for 5.001376 seconds and try again... (tryings = 119, bot id = 7488365215)
+2024-07-09 18:52:55,954 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:52:55,954 - aiogram.dispatcher - WARNING - Sleep for 5.142797 seconds and try again... (tryings = 120, bot id = 7488365215)
+2024-07-09 18:53:01,105 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 18:53:01,105 - aiogram.dispatcher - WARNING - Sleep for 4.901374 seconds and try again... (tryings = 121, bot id = 7488365215)
+2024-07-09 21:28:46,830 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 21:28:46,831 - aiogram.dispatcher - WARNING - Sleep for 5.121356 seconds and try again... (tryings = 122, bot id = 7488365215)
+2024-07-09 21:28:51,960 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 21:28:51,960 - aiogram.dispatcher - WARNING - Sleep for 5.253792 seconds and try again... (tryings = 123, bot id = 7488365215)
+2024-07-09 21:28:57,221 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 21:28:57,221 - aiogram.dispatcher - WARNING - Sleep for 4.916656 seconds and try again... (tryings = 124, bot id = 7488365215)
+2024-07-09 21:29:02,145 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 21:29:02,145 - aiogram.dispatcher - WARNING - Sleep for 4.934688 seconds and try again... (tryings = 125, bot id = 7488365215)
+2024-07-09 21:29:07,086 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 21:29:07,086 - aiogram.dispatcher - WARNING - Sleep for 4.836557 seconds and try again... (tryings = 126, bot id = 7488365215)
+2024-07-09 21:29:11,930 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 21:29:11,930 - aiogram.dispatcher - WARNING - Sleep for 4.975569 seconds and try again... (tryings = 127, bot id = 7488365215)
+2024-07-09 21:29:16,913 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-09 21:29:16,913 - aiogram.dispatcher - WARNING - Sleep for 5.088052 seconds and try again... (tryings = 128, bot id = 7488365215)
+2024-07-10 09:14:38,368 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 09:14:38,369 - aiogram.dispatcher - WARNING - Sleep for 5.019569 seconds and try again... (tryings = 129, bot id = 7488365215)
+2024-07-10 09:14:43,395 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 09:14:43,395 - aiogram.dispatcher - WARNING - Sleep for 4.937202 seconds and try again... (tryings = 130, bot id = 7488365215)
+2024-07-10 09:14:48,340 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 09:14:48,340 - aiogram.dispatcher - WARNING - Sleep for 5.044826 seconds and try again... (tryings = 131, bot id = 7488365215)
+2024-07-10 09:14:53,393 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 09:14:53,393 - aiogram.dispatcher - WARNING - Sleep for 5.107866 seconds and try again... (tryings = 132, bot id = 7488365215)
+2024-07-10 09:14:58,509 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 09:14:58,510 - aiogram.dispatcher - WARNING - Sleep for 5.049441 seconds and try again... (tryings = 133, bot id = 7488365215)
+2024-07-10 09:15:03,568 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 09:15:03,568 - aiogram.dispatcher - WARNING - Sleep for 5.022367 seconds and try again... (tryings = 134, bot id = 7488365215)
+2024-07-10 15:43:57,339 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:43:57,339 - aiogram.dispatcher - WARNING - Sleep for 5.001547 seconds and try again... (tryings = 135, bot id = 7488365215)
+2024-07-10 15:44:02,347 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:44:02,347 - aiogram.dispatcher - WARNING - Sleep for 5.021849 seconds and try again... (tryings = 136, bot id = 7488365215)
+2024-07-10 15:44:07,376 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:44:07,376 - aiogram.dispatcher - WARNING - Sleep for 5.131464 seconds and try again... (tryings = 137, bot id = 7488365215)
+2024-07-10 15:44:12,515 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:44:12,515 - aiogram.dispatcher - WARNING - Sleep for 4.874762 seconds and try again... (tryings = 138, bot id = 7488365215)
+2024-07-10 15:44:17,395 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:44:17,395 - aiogram.dispatcher - WARNING - Sleep for 4.936757 seconds and try again... (tryings = 139, bot id = 7488365215)
+2024-07-10 15:44:22,337 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:44:22,337 - aiogram.dispatcher - WARNING - Sleep for 5.072588 seconds and try again... (tryings = 140, bot id = 7488365215)
+2024-07-10 15:44:27,417 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:44:27,417 - aiogram.dispatcher - WARNING - Sleep for 5.048817 seconds and try again... (tryings = 141, bot id = 7488365215)
+2024-07-10 15:44:32,473 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:44:32,474 - aiogram.dispatcher - WARNING - Sleep for 4.901173 seconds and try again... (tryings = 142, bot id = 7488365215)
+2024-07-10 15:44:37,381 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:44:37,381 - aiogram.dispatcher - WARNING - Sleep for 5.054026 seconds and try again... (tryings = 143, bot id = 7488365215)
+2024-07-10 15:44:42,444 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:44:42,444 - aiogram.dispatcher - WARNING - Sleep for 5.028508 seconds and try again... (tryings = 144, bot id = 7488365215)
+2024-07-10 15:44:47,481 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:44:47,481 - aiogram.dispatcher - WARNING - Sleep for 4.975291 seconds and try again... (tryings = 145, bot id = 7488365215)
+2024-07-10 15:44:52,464 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:44:52,464 - aiogram.dispatcher - WARNING - Sleep for 5.011170 seconds and try again... (tryings = 146, bot id = 7488365215)
+2024-07-10 15:44:57,482 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:44:57,482 - aiogram.dispatcher - WARNING - Sleep for 5.115280 seconds and try again... (tryings = 147, bot id = 7488365215)
+2024-07-10 15:45:02,606 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:45:02,607 - aiogram.dispatcher - WARNING - Sleep for 4.918530 seconds and try again... (tryings = 148, bot id = 7488365215)
+2024-07-10 15:45:07,534 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:45:07,534 - aiogram.dispatcher - WARNING - Sleep for 4.987963 seconds and try again... (tryings = 149, bot id = 7488365215)
+2024-07-10 15:45:12,529 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:45:12,530 - aiogram.dispatcher - WARNING - Sleep for 5.089727 seconds and try again... (tryings = 150, bot id = 7488365215)
+2024-07-10 15:45:17,626 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:45:17,626 - aiogram.dispatcher - WARNING - Sleep for 5.176836 seconds and try again... (tryings = 151, bot id = 7488365215)
+2024-07-10 15:45:22,811 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:45:22,812 - aiogram.dispatcher - WARNING - Sleep for 4.887915 seconds and try again... (tryings = 152, bot id = 7488365215)
+2024-07-10 15:45:27,707 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:45:27,707 - aiogram.dispatcher - WARNING - Sleep for 4.975488 seconds and try again... (tryings = 153, bot id = 7488365215)
+2024-07-10 15:45:32,690 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:45:32,690 - aiogram.dispatcher - WARNING - Sleep for 4.938604 seconds and try again... (tryings = 154, bot id = 7488365215)
+2024-07-10 15:45:37,636 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:45:37,637 - aiogram.dispatcher - WARNING - Sleep for 4.977284 seconds and try again... (tryings = 155, bot id = 7488365215)
+2024-07-10 15:45:42,621 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:45:42,622 - aiogram.dispatcher - WARNING - Sleep for 5.102233 seconds and try again... (tryings = 156, bot id = 7488365215)
+2024-07-10 15:45:47,731 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:45:47,731 - aiogram.dispatcher - WARNING - Sleep for 5.127551 seconds and try again... (tryings = 157, bot id = 7488365215)
+2024-07-10 15:45:52,867 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:45:52,867 - aiogram.dispatcher - WARNING - Sleep for 5.021550 seconds and try again... (tryings = 158, bot id = 7488365215)
+2024-07-10 15:45:57,896 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:45:57,896 - aiogram.dispatcher - WARNING - Sleep for 5.217332 seconds and try again... (tryings = 159, bot id = 7488365215)
+2024-07-10 15:46:03,121 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:46:03,121 - aiogram.dispatcher - WARNING - Sleep for 4.976392 seconds and try again... (tryings = 160, bot id = 7488365215)
+2024-07-10 15:46:08,104 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:46:08,104 - aiogram.dispatcher - WARNING - Sleep for 5.053592 seconds and try again... (tryings = 161, bot id = 7488365215)
+2024-07-10 15:46:13,166 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2024-07-10 15:46:13,166 - aiogram.dispatcher - WARNING - Sleep for 4.758848 seconds and try again... (tryings = 162, bot id = 7488365215)
+2024-07-10 15:46:13,780 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2024-07-10 15:46:13,780 - aiogram.dispatcher - INFO - Polling stopped for bot @starttontest1bot id=7488365215 - 'startton_test_bot_1'
+2024-07-10 15:46:13,780 - aiogram.dispatcher - INFO - Polling stopped
